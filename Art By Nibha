@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArtByNibha</title>
+    <style>
+      body {
+        background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+      }
+      h1 {
+        text-align: center;
+        font-family: "Gill Sans", sans-serif;
+        font-size: 40px;
+        font-weight: lighter;
+        color: #365378;
+      }
+      h2 {
+        text-align: center;
+        color: #e0dde6;
+        border: 1px solid#7241EC;
+        line-height: 50px;
+        background-color: rgb(104, 102, 95);
+        font-size: 20px;
+        font-weight: lighter;
+        border-radius: 4px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 15px;
+        margin: 20px 0 10px;
+      }
+      button {
+        display: block;
+        padding: 15px 20px;
+        margin: 20px auto;
+        background: rgb(104, 102, 95);
+        color: rgb(250, 248, 244);
+        border-radius: 5px;
+        font-size: 18px;
+        border: none;
+        box-shadow: 5px 5px 5px rgb(155, 153, 148);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        background: royalblue;
+        cursor: pointer;
+      }
+      strong {
+        display: block;
+        text-align: center;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30 px 60px;
+      }
+      .learn-more {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(110, 15, 199);
+        font-size: 25px;
+      }
+      .learn-more:hover {
+        text-decoration: underline;
+        color: blue;
+      }
+      .footer {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Art By Nibha</h1>
+      <h2>My Wonderful Art World</h2>
+      <hr />
+      <img
+        src="http://www.artbynibha.com/wp-content/uploads/2018/08/IMG_3387.jpg"
+        alt="artnibha"
+        width="500"
+      />
+      <hr />
+      <p>
+        For 25 something odd years, I’ve been an <em>artist so to speak</em>.
+        The first time I ever revealed my art work in anything close to a public
+        display was in 2010 in a silent auction. I found myself turning to my
+        paints and brushes when I needed them the most at various times of my
+        life. The good, the bad and the very ugly. They were there, guiding my
+        soul and giving me comfort. I hope to be able to share with you all my
+        art pieces and styles.
+        <br />
+        <strong>
+          If you'd like to learn more about me or are interested in any of my
+          piece, please click on the links below!
+        </strong>
+      </p>
+      <a href="http://www.artbynibha.com/" target="_blank" class="learn-more">
+        Click Here To Learn More About My Art 🎨
+      </a>
+      <button class="buyButton">To Buy An Art Piece, Contact Me 💬</button>
+      <p class="footer">This page was built by Nibha Varma</p>
+    </div>
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your e-mail address?");
+        let art = prompt("Are you interested in purchasing an art piece?");
+        art = art.toLowerCase();
+
+        if (art === "yes") {
+          alert("Hi " + name + "! We'll be in touch by e-mail!");
+        } else {
+          alert("Sorry " + name + "! Hope you find an artist you like!");
+        }
+      }
+      let buyButton = document.querySelector(".buyButton");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
